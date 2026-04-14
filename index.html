@@ -7,7 +7,35 @@
     <title>Quize app</title>
 </head>
 <body>
-    
+    <div class="quiz-container">
+
+    <!-- Title -->
+    <h1>Quiz App</h1>
+
+    <!-- Question -->
+    <div class="question-box">
+      <h2 id="question">Question text will appear here</h2>
+    </div>
+
+    <!-- Options -->
+    <div class="options">
+      <button class="option-btn" data-index="0">Option 1</button>
+      <button class="option-btn" data-index="1">Option 2</button>
+      <button class="option-btn" data-index="2">Option 3</button>
+      <button class="option-btn" data-index="3">Option 4</button>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button id="nextBtn">Next</button>
+    </div>
+
+    <!-- Score -->
+    <div class="score-box">
+      <p>Score: <span id="score">0</span></p>
+    </div>
+
+  </div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@ const optionBtns = document.querySelectorAll(".option-btn");
 const controls = document.querySelector(".controls");
 const nextBtn = document.querySelector("#nextBtn");
 const scoreBox = document.querySelector(".score-box");
-const score = document.querySelector("#score");
+const scoreText = document.querySelector("#score");
 
 // quiz data
 const quizData = [
@@ -25,3 +25,7 @@ const quizData = [
     correct: 2
   }
 ];
+
+let currentQuestion = 0
+let score = 0
+let answered = false

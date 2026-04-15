@@ -1,5 +1,5 @@
 // select all the elements
-const question = document.querySelector("#question");
+const questionText = document.querySelector("#question");
 const options = document.querySelector(".options");
 const optionBtns = document.querySelectorAll(".option-btn");
 const controls = document.querySelector(".controls");
@@ -35,8 +35,8 @@ let answered = false
 function loadQuestion() {
     answered = false
 
-    const current = quizData[currentQuestion];
-    question.textContent = current.question;
+   const current = quizData[currentQuestion];
+   questionText.textContent = current.question;
 
     optionBtns.forEach((btn,index)=>{
       btn.textContent = current.options[index];
@@ -67,3 +67,6 @@ optionBtns.forEach((btn, index) => {
     optionBtns.forEach(btn => btn.disabled = true)
   });
 });
+
+// start quize 
+loadQuestion();

@@ -68,5 +68,18 @@ optionBtns.forEach((btn, index) => {
   });
 });
 
+// next button
+nextBtn.addEventListener("click", () => {
+  currentQuestion++;
+
+  if (currentQuestion < quizData.length) {
+    loadQuestion();
+  } else {
+    questionText.textContent = "Quiz Finished!";
+    document.querySelector(".options").style.display = "none";
+    nextBtn.style.display = "none";
+  }
+});
+
 // start quize 
 loadQuestion();

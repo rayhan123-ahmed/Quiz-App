@@ -39,8 +39,31 @@ function loadQuestion() {
     question.textContent = current.question;
 
     optionBtns.forEach((btn,index)=>{
-      btn.textContent = question.options[index];
-      btn.style.background = '';
+      btn.textContent = current.options[index];
       btn.disabled = false;
+      btn.classList.remove("correct", "wrong");
     })
 }
+
+// cheack answer
+
+optionBtns.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    if (answered) return;
+
+    answered = true;
+
+    const correctIndex = quizData[currentQuestion].correct;
+
+    if (index === correctIndex) {
+      btn.classList.add("correct");
+      score++;
+      scoreText.textContent = score;
+    } else {
+      btn.classList.add("wrong");
+      optionBtns[correctIndex].classList.add("correct");
+    }
+
+    optionBtns.forEach(btn => btn.disabled = true)
+  });
+});

@@ -29,3 +29,18 @@ const quizData = [
 let currentQuestion = 0
 let score = 0
 let answered = false
+
+// load question
+
+function loadQuestion() {
+    answered = false
+
+    const current = quizData[currentQuestion];
+    question.textContent = current.question;
+
+    optionBtns.forEach((btn,index)=>{
+      btn.textContent = question.options[index];
+      btn.style.background = '';
+      btn.disabled = false;
+    })
+}

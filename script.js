@@ -12,18 +12,48 @@ const quizData = [
   {
     question: "What is the capital of Bangladesh?",
     options: ["Chittagong", "Dhaka", "Khulna", "Sylhet"],
-    correct: 1
+    correct: 1,
   },
   {
     question: "Which language is used for web structure?",
     options: ["CSS", "HTML", "JavaScript", "Python"],
-    correct: 1
+    correct: 1,
   },
   {
     question: "Which one is NOT a programming language?",
     options: ["Java", "Python", "HTML", "C++"],
-    correct: 2
-  }
+    correct: 2,
+  },
+  {
+    question: "Which tag is used to create a hyperlink in HTML?",
+    options: ["<link>", "<a>", "<href>", "<p>"],
+    correct: 1,
+  },
+  {
+    question: "Which company created JavaScript?",
+    options: ["Microsoft", "Apple", "Netscape", "Google"],
+    correct: 2,
+  },
+  {
+    question: "Which symbol is used for comments in JavaScript?",
+    options: ["<!-- -->", "//", "/* */", "#"],
+    correct: 1,
+  },
+  {
+    question: "Which CSS property changes text color?",
+    options: ["font-color", "text-color", "color", "fgcolor"],
+    correct: 2,
+  },
+  {
+    question: "What does HTML stand for?",
+    options: [
+      "Hyper Text Markup Language",
+      "High Text Machine Language",
+      "Hyper Transfer Markup Language",
+      "Home Tool Markup Language",
+    ],
+    correct: 0,
+  },
 ];
 
 let currentQuestion = 0

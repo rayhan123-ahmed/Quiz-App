@@ -4,6 +4,7 @@ const options = document.querySelector(".options");
 const optionBtns = document.querySelectorAll(".option-btn");
 const controls = document.querySelector(".controls");
 const nextBtn = document.querySelector("#nextBtn");
+const resetBtn = document.querySelector("#resetBtn");
 const scoreBox = document.querySelector(".score-box");
 const scoreText = document.querySelector("#score");
 
@@ -108,6 +109,8 @@ nextBtn.addEventListener("click", () => {
     questionText.textContent = "Quiz Finished!";
     document.querySelector(".options").style.display = "none";
     nextBtn.style.display = "none";
+    resetBtn.style.display = 'block'
+    controls.style.justifyContent = "center";
   }
 });
 

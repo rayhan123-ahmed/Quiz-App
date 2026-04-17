@@ -57,23 +57,23 @@ const quizData = [
   },
 ];
 
-let currentQuestion = 0
-let score = 0
-let answered = false
+let currentQuestion = 0;
+let score = 0;
+let answered = false;
 
 // load question
 
 function loadQuestion() {
-    answered = false
+  answered = false;
 
-   const current = quizData[currentQuestion];
-   questionText.textContent = current.question;
+  const current = quizData[currentQuestion];
+  questionText.textContent = current.question;
 
-    optionBtns.forEach((btn,index)=>{
-      btn.textContent = current.options[index];
-      btn.disabled = false;
-      btn.classList.remove("correct", "wrong");
-    })
+  optionBtns.forEach((btn, index) => {
+    btn.textContent = current.options[index];
+    btn.disabled = false;
+    btn.classList.remove("correct", "wrong");
+  });
 }
 
 // cheack answer
@@ -95,7 +95,7 @@ optionBtns.forEach((btn, index) => {
       optionBtns[correctIndex].classList.add("correct");
     }
 
-    optionBtns.forEach(btn => btn.disabled = true)
+    optionBtns.forEach((btn) => (btn.disabled = true));
   });
 });
 
@@ -109,24 +109,24 @@ nextBtn.addEventListener("click", () => {
     questionText.textContent = "Quiz Finished!";
     document.querySelector(".options").style.display = "none";
     nextBtn.style.display = "none";
-    resetBtn.style.display = 'block'
+    resetBtn.style.display = "block";
     controls.style.justifyContent = "center";
   }
 });
 
 // reset button
 
-resetBtn.addEventListener('click',()=>{
-   score = 0
-   currentQuestion = 0
-   options.style.display = 'flex'
-   scoreText.textContent = score;
-   nextBtn.style.display = "block";
-   controls.style.justifyContent = "flex-end";
+resetBtn.addEventListener("click", () => {
+  score = 0;
+  currentQuestion = 0;
+  options.style.display = "flex";
+  scoreText.textContent = score;
+  nextBtn.style.display = "block";
+  controls.style.justifyContent = "flex-end";
 
-   resetBtn.style.display = "none";
-   loadQuestion();
-})
+  resetBtn.style.display = "none";
+  loadQuestion();
+});
 
-// start quize 
+// start quize
 loadQuestion();

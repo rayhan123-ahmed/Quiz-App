@@ -114,5 +114,19 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
+// reset button
+
+resetBtn.addEventListener('click',()=>{
+   score = 0
+   currentQuestion = 0
+   options.style.display = 'flex'
+   scoreText.textContent = score;
+   nextBtn.style.display = "block";
+   controls.style.justifyContent = "flex-end";
+
+   resetBtn.style.display = "none";
+   loadQuestion();
+})
+
 // start quize 
 loadQuestion();
